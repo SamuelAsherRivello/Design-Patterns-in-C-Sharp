@@ -1,9 +1,9 @@
 //The Concrete Factory class is responsible for creating the concrete products
+
 using UnityEngine;
 
 namespace DesignPatterns.CreationalPatterns.AbstractFactoryPattern
 {
-
     public class ConcreteFactory : MonoBehaviour, IAbstractFactory
     {
         [SerializeField] private GameObject productA;
@@ -24,11 +24,8 @@ namespace DesignPatterns.CreationalPatterns.AbstractFactoryPattern
         //Create ConcreteProduct A and Add the components
         private IAbstractProduct CreateProductA()
         {
-            GameObject product = Instantiate(productA);
-            foreach (MonoBehaviour component in productAComponents)
-            {
-                product.AddComponent(component.GetType());
-            }
+            var product = Instantiate(productA);
+            foreach (var component in productAComponents) product.AddComponent(component.GetType());
 
             return product.GetComponent<IAbstractProduct>();
         }
@@ -36,14 +33,10 @@ namespace DesignPatterns.CreationalPatterns.AbstractFactoryPattern
         //Create ConcreteProduct B and Add the components
         private IAbstractProduct CreateProductB()
         {
-            GameObject product = Instantiate(productB);
-            foreach (MonoBehaviour component in productBComponents)
-            {
-                product.AddComponent(component.GetType());
-            }
+            var product = Instantiate(productB);
+            foreach (var component in productBComponents) product.AddComponent(component.GetType());
 
             return product.GetComponent<IAbstractProduct>();
         }
     }
 }
-    

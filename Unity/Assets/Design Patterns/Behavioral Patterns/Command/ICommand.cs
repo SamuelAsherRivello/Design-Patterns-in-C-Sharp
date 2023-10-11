@@ -1,4 +1,5 @@
 //The Command acts as an interface for all commands.
+
 using UnityEngine;
 
 namespace DesignPatterns.BehavioralPatterns.CommandPattern

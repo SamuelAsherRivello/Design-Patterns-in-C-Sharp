@@ -1,4 +1,5 @@
 //The sample data struct will store data that will be used by the Memento.
+
 using UnityEngine;
 
 namespace DesignPatterns.BehavioralPatterns.MementoPattern
@@ -8,6 +9,5 @@ namespace DesignPatterns.BehavioralPatterns.MementoPattern
     {
         public int Data1 { get; set; }
         public string Data2 { get; set; }
-
     }
 }

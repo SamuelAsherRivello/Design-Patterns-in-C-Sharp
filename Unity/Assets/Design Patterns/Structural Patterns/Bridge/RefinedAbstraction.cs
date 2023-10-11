@@ -1,4 +1,5 @@
 //The RefinedAbstraction extends the interface defined by Abstraction.
+
 using UnityEngine;
 
 namespace DesignPatterns.StructuralPatterns.BridgePattern

@@ -1,14 +1,17 @@
 //The Concrete Iterator is the one that will be used to iterate through the collection.
+
 namespace DesignPatterns.BehavioralPatterns.IteratorPattern
 {
     public class ConcreteIterator : IIterator
     {
-        private ConcreteAggregate _aggregate;
-        private int _current = 0;
+        private readonly ConcreteAggregate _aggregate;
+        private int _current;
+
         public ConcreteIterator(ConcreteAggregate aggregate)
         {
-            this._aggregate = aggregate;
+            _aggregate = aggregate;
         }
+
         public object Next()
         {
             object ret = null;
@@ -17,8 +20,10 @@ namespace DesignPatterns.BehavioralPatterns.IteratorPattern
                 ret = _aggregate[_current];
                 _current++;
             }
+
             return ret;
         }
+
         public bool HasNext()
         {
             return _current < _aggregate.Count;

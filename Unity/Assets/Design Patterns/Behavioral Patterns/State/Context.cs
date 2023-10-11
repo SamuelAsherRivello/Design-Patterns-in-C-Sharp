@@ -1,27 +1,31 @@
 //The Context defines the interface of interest to clients. It also maintains a reference to an instance of a State subclass, which represents the current state of the Context.
+
 using UnityEngine;
 
-namespace DesignPatterns.BehavioralPatterns.StatePattern 
+namespace DesignPatterns.BehavioralPatterns.StatePattern
 {
-    public class Context 
+    public class Context
     {
         private IState _state;
-        public IState State {
-            get { return _state; }
-            set {
+
+        public Context()
+        {
+            State = null;
+        }
+
+        public IState State
+        {
+            get => _state;
+            set
+            {
                 _state = value;
                 Debug.Log("State: " + _state.GetType().Name);
             }
         }
-        
-        public Context() 
+
+        public void Request()
         {
-            this.State = null;
-        }
-        
-        public void Request() 
-        {
-            this.State.Handle(this);
+            State.Handle(this);
         }
     }
 }

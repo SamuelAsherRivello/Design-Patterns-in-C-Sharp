@@ -1,4 +1,5 @@
 //The Concrete Builder class is responsible for creating the concrete products
+
 using UnityEngine;
 
 namespace DesignPatterns.CreationalPatterns.BuilderPattern
@@ -23,11 +24,8 @@ namespace DesignPatterns.CreationalPatterns.BuilderPattern
         //Create ConcreteProduct A and Add the components
         private IProduct CreateProductA()
         {
-            GameObject product = Instantiate(productA);
-            foreach (MonoBehaviour component in productAComponents)
-            {
-                product.AddComponent(component.GetType());
-            }
+            var product = Instantiate(productA);
+            foreach (var component in productAComponents) product.AddComponent(component.GetType());
 
             return product.GetComponent<IProduct>();
         }
@@ -35,11 +33,8 @@ namespace DesignPatterns.CreationalPatterns.BuilderPattern
         //Create ConcreteProduct B and Add the components
         private IProduct CreateProductB()
         {
-            GameObject product = Instantiate(productB);
-            foreach (MonoBehaviour component in productBComponents)
-            {
-                product.AddComponent(component.GetType());
-            }
+            var product = Instantiate(productB);
+            foreach (var component in productBComponents) product.AddComponent(component.GetType());
 
             return product.GetComponent<IProduct>();
         }

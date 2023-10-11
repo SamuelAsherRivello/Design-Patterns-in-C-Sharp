@@ -1,4 +1,5 @@
 //The Reciever is the one that will be executing the command.
+
 using UnityEngine;
 
 namespace DesignPatterns.BehavioralPatterns.CommandPattern

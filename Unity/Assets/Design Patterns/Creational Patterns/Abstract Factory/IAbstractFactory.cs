@@ -5,11 +5,10 @@
 //AbstractProduct: Declares an interface for a type of product object.
 //ConcreteProduct: Defines a product object to be created by the corresponding concrete factory. Implements the AbstractProduct interface.
 //AbstractFactoryExample: Uses only interfaces declared by AbstractFactory and AbstractProduct classes.
-using UnityEngine;
 
 namespace DesignPatterns.CreationalPatterns.AbstractFactoryPattern
 {
-    interface IAbstractFactory
+    internal interface IAbstractFactory
     {
         IAbstractProduct CreateProductA();
         IAbstractProduct CreateProductB();

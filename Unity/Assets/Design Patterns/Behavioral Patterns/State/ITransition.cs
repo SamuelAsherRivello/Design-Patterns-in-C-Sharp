@@ -1,4 +1,5 @@
 //ITransition interface declares a method for executing a transition-specific behavior.
+
 namespace DesignPatterns.BehavioralPatterns.StatePattern
 {
     public interface ITransition
@@ -27,16 +28,16 @@ namespace DesignPatterns.BehavioralPatterns.StatePattern
         //Customizeable transitions:
         public class CustomTransition : ITransition
         {
-            private IState _state;
+            private readonly IState _state;
 
             public CustomTransition(IState state)
             {
-                this._state = state;
+                _state = state;
             }
 
             public void Handle(Context context)
             {
-                context.State = this._state;
+                context.State = _state;
             }
         }
     }

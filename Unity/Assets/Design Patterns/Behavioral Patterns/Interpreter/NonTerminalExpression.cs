@@ -1,10 +1,11 @@
 // A Nonterminal Expression is one that contains other expressions.
+
 namespace DesignPatterns.BehavioralPatterns.InterpreterPattern
 {
     public class NonTerminalExpression : IAbstractExpression
     {
-        private IAbstractExpression _expression1;
-        private IAbstractExpression _expression2;
+        private readonly IAbstractExpression _expression1;
+        private readonly IAbstractExpression _expression2;
 
         public NonTerminalExpression(IAbstractExpression expression1, IAbstractExpression expression2)
         {
@@ -18,5 +19,4 @@ namespace DesignPatterns.BehavioralPatterns.InterpreterPattern
             _expression2.Interpret(context);
         }
     }
-    
 }

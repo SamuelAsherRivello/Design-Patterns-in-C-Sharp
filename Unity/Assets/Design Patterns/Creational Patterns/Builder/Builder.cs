@@ -7,5 +7,5 @@ namespace DesignPatterns.CreationalPatterns.BuilderPattern
         void BuildPartA();
         void BuildPartB();
         void BuildPartC();
-    }  
+    }
 }

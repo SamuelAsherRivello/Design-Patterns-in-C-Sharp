@@ -6,5 +6,4 @@ namespace DesignPatterns.CreationalPatterns.BuilderPattern
     {
         void Activate();
     }
-
 }

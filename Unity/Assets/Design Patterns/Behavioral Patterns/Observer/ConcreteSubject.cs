@@ -1,18 +1,19 @@
 //The Concrete Subject contains some important state and notifies observers when the state changes.
 //observer as a MonoBehaviour
-using UnityEngine;
+
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace DesignPatterns.BehavioralPatterns.ObserverPattern
 {
     public class Subject : MonoBehaviour, ISubject
     {
+        private readonly List<IObserver> _observers = new();
         private double _price;
-        private List<IObserver> _observers = new List<IObserver>();
 
         public double Price
         {
-            get { return _price; }
+            get => _price;
             set
             {
                 if (_price != value)
@@ -35,10 +36,7 @@ namespace DesignPatterns.BehavioralPatterns.ObserverPattern
 
         public void Notify()
         {
-            foreach (IObserver observer in _observers)
-            {
-                observer.Update(this);
-            }
+            foreach (var observer in _observers) observer.Update(this);
         }
     }
 }

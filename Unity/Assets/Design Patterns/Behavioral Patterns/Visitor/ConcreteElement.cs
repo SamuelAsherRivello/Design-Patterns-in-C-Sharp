@@ -1,25 +1,32 @@
 //Concrete Element class 
 //Each Concrete Element must implement the Accept operation that takes a visitor as an argument.
+
 using UnityEngine;
 
-namespace DesignPatterns.BehavioralPatterns.VisitorPattern 
+namespace DesignPatterns.BehavioralPatterns.VisitorPattern
 {
-    public class ConcreteElementA : IElement 
+    public class ConcreteElementA : IElement
     {
-        public void Accept(IVisitor visitor) {
+        public void Accept(IVisitor visitor)
+        {
             visitor.VisitConcreteElementA(this);
         }
-        public void OperationA() {
+
+        public void OperationA()
+        {
             Debug.Log("ConcreteElementA.OperationA() called.");
         }
     }
-    
-    public class ConcreteElementB : IElement 
+
+    public class ConcreteElementB : IElement
     {
-        public void Accept(IVisitor visitor) {
+        public void Accept(IVisitor visitor)
+        {
             visitor.VisitConcreteElementB(this);
         }
-        public void OperationB() {
+
+        public void OperationB()
+        {
             Debug.Log("ConcreteElementB.OperationB() called.");
         }
     }

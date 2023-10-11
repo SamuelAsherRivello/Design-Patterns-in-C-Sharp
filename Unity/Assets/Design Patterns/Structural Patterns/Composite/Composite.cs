@@ -7,28 +7,26 @@ namespace DesignPatterns.StructuralPatterns.CompositePattern
 {
     public class Composite : IComponent
     {
-        private List<IComponent> _children = new List<IComponent>();
+        private readonly List<IComponent> _children = new();
+
+        public void Operation()
+        {
+            foreach (var component in _children) component.Operation();
+        }
+
+        public void SecondaryOperation()
+        {
+            foreach (var component in _children) component.SecondaryOperation();
+        }
+
         public void Add(IComponent component)
         {
             _children.Add(component);
         }
+
         public void Remove(IComponent component)
         {
             _children.Remove(component);
-        }
-        public void Operation()
-        {
-            foreach (IComponent component in _children)
-            {
-                component.Operation();
-            }
-        }
-        public void SecondaryOperation()
-        {
-            foreach (IComponent component in _children)
-            {
-                component.SecondaryOperation();
-            }
         }
     }
 }

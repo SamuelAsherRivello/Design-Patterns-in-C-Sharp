@@ -1,4 +1,5 @@
 //The Concrete Colleague is the one that will be used to communicate with the Mediator.
+
 using UnityEngine;
 
 namespace DesignPatterns.BehavioralPatterns.MediatorPattern
@@ -19,7 +20,7 @@ namespace DesignPatterns.BehavioralPatterns.MediatorPattern
             Debug.Log("Colleague1 gets message: " + message);
         }
     }
-    
+
     public class ConcreteColleague2 : Colleague
     {
         public ConcreteColleague2(Mediator mediator) : base(mediator)
