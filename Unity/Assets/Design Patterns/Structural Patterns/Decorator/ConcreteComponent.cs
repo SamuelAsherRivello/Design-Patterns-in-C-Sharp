@@ -1,8 +1,8 @@
 //The ConcreteComponent class defines an object to which additional responsibilities can be attached.
-namespace DecoratorPattern
-{
-    using UnityEngine;
+using UnityEngine;
 
+namespace DesignPatterns.StructuralPatterns.DecoratorPattern
+{
     public class ConcreteComponent : MonoBehaviour, IComponent
     {
         public void Operation()

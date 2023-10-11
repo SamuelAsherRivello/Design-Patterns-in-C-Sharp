@@ -1,7 +1,9 @@
 //The Composite class represents the complex components that may have children.
 //It stores child components and implements child-related operations in the Component interface.
-using UnityEngine;
-namespace CompositePattern
+
+using System.Collections.Generic;
+
+namespace DesignPatterns.StructuralPatterns.CompositePattern
 {
     public class Composite : IComponent
     {

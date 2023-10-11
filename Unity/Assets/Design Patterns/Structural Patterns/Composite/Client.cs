@@ -1,6 +1,8 @@
-//The Client in the Composite pattern is the client code that works with the composite structure. It can be a simple or complex component. The client code is coupled to the Component interface. The client code can work with both simple and complex components via the Component interface.
+//The AbstractFactoryExample in the Composite pattern is the client code that works with the composite structure. It can be a simple or complex component. The client code is coupled to the Component interface. The client code can work with both simple and complex components via the Component interface.
 using UnityEngine;
-namespace CompositePattern{
+
+namespace DesignPatterns.StructuralPatterns.CompositePattern
+{
     public class Client : MonoBehaviour {
         void Start() {
             //Create a tree structure

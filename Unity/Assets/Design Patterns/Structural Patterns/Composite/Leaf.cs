@@ -1,6 +1,8 @@
 //The Leaf class represents the end objects of a composition. A leaf can't have any children.
 //It defines behavior for primitive objects in the composition.
-namespace CompositePattern
+using UnityEngine;
+
+namespace DesignPatterns.StructuralPatterns.CompositePattern
 {
     public class Leaf : IComponent
     {

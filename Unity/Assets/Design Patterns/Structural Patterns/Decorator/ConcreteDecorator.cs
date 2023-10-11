@@ -1,7 +1,7 @@
 //The ConcreteDecorator class has a field for storing a reference to a wrapped component object.
 using UnityEngine;
 
-namespace DecoratorPattern
+namespace DesignPatterns.StructuralPatterns.DecoratorPattern
 {
     public class ConcreteDecoratorA : MonoBehaviour, IDecorator
     {

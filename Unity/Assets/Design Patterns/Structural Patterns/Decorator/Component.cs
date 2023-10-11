@@ -1,5 +1,5 @@
 //The Component interface declares common operations for both simple and complex objects of a composition.
-namespace DecoratorPattern
+namespace DesignPatterns.StructuralPatterns.DecoratorPattern
 {
     public interface IComponent
     {
