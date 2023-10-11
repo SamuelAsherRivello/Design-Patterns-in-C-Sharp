@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class Product : MonoBehaviour {
     
-    //create delegate
-    private delegate OnActivate();
+    private delegate void OnActivate();
     private OnActivate onActivate;
     public void Activate() {
         onActivate();
