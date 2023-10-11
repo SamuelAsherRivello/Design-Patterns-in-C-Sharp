@@ -4,39 +4,28 @@ using UnityEngine;
 
 namespace DesignPatterns.CreationalPatterns.BuilderPattern
 {
-    public class BuilderExample : MonoBehaviour, IBuilder
+    public class BuilderExample : MonoBehaviour
     {
-        [SerializeField] private GameObject productA;
-        [SerializeField] private MonoBehaviour[] productAComponents;
-        [SerializeField] private GameObject productB;
-        [SerializeField] private MonoBehaviour[] productBComponents;
-
-        public IProduct CreateProductA()
+        protected void Start()
         {
-            return CreateProduct();
-        }
+            // The client code creates a builder object, passes it to the
+            // director and then initiates the construction process. The end
+            // result is retrieved from the builder object.
+            var builder = new ConcreteBuilder();
+            
+            // Example 01
+            // The Director can construct several product variations using the Builder
+            var director = new Director();
+            director.Builder = builder;
+            director.BuildMinimalViableProduct();
+            director.BuildFullFeaturedProduct();
+            
+            // Example 02
+            // Remember, the Builder pattern can be used without a Director
+            builder.BuildPartA();
+            builder.BuildPartC();
 
-        public IProduct CreateProductB()
-        {
-            return CreateProductB();
-        }
-
-        //Create ConcreteProduct A and Add the components
-        private IProduct CreateProductA()
-        {
-            var product = Instantiate(productA);
-            foreach (var component in productAComponents) product.AddComponent(component.GetType());
-
-            return product.GetComponent<IProduct>();
-        }
-
-        //Create ConcreteProduct B and Add the components
-        private IProduct CreateProductB()
-        {
-            var product = Instantiate(productB);
-            foreach (var component in productBComponents) product.AddComponent(component.GetType());
-
-            return product.GetComponent<IProduct>();
+            
         }
     }
 }

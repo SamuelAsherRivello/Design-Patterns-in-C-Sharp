@@ -6,16 +6,13 @@ using UnityEngine;
 
 namespace DesignPatterns.StructuralPatterns.AdapterPattern
 {
-    public class Adapter : MonoBehaviour
+    public class Adapter : MonoBehaviour, ITarget
     {
-        //The Adapter makes the Adaptee's interface compatible with the Target's interface.
-        private readonly Adaptee adaptee = new();
+        private readonly Adaptee _adaptee = new();
 
-        //The Adapter makes the Adaptee's interface compatible with the Target's interface.
         public void Request()
         {
-            //The Adapter translates the interface of Adaptee into a Target interface.
-            adaptee.SpecificRequest();
+            _adaptee.SpecificRequest();
         }
     }
 }

@@ -6,7 +6,6 @@ namespace DesignPatterns.StructuralPatterns.FlyweightPattern
 {
     public class ConcreteFlyweight : MonoBehaviour, IFlyweight
     {
-        [SerializeField] private string name;
         private string _intrinsicState;
 
         public ConcreteFlyweight(string intrinsicState)
@@ -17,7 +16,7 @@ namespace DesignPatterns.StructuralPatterns.FlyweightPattern
         private void OnEnable()
         {
             //Add the flyweight to the flyweight pool
-            GameManager.Instance.GetFlyweeightFactory().AddFlyweight(name, this);
+            //GameManager.Instance.GetFlyweeightFactory().AddFlyweight(name, this);
         }
 
         public void Operation()

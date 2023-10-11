@@ -6,17 +6,17 @@ namespace DesignPatterns.CreationalPatterns.AbstractFactoryPattern
 {
     public class AbstractFactoryExample : MonoBehaviour
     {
-        private IAbstractFactory factory;
-        private IAbstractProduct productA;
-        private IAbstractProduct productB;
+        private IAbstractFactory _abstractFactory;
+        private IAbstractProductA _abstractProductA;
+        private IAbstractProductB _abstractProductB;
 
         private void Start()
         {
-            factory = new ConcreteFactory();
-            productA = factory.CreateProductA();
-            productB = factory.CreateProductB();
-            productA.Activate();
-            productB.Activate();
+            _abstractFactory = new ConcreteFactory();
+            _abstractProductA = _abstractFactory.CreateProductA();
+            _abstractProductB = _abstractFactory.CreateProductB();
+            _abstractProductA.UsefulMethodA();
+            _abstractProductB.UsefulMethodB();
         }
     }
 }

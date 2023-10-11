@@ -3,14 +3,14 @@
 //AbstractFactory: Declares an interface for operations that create abstract products.
 //ConcreteFactory: Implements the operations to create concrete product objects.
 //AbstractProduct: Declares an interface for a type of product object.
-//ConcreteProduct: Defines a product object to be created by the corresponding concrete factory. Implements the AbstractProduct interface.
+//ConcreteProductA: Defines a product object to be created by the corresponding concrete factory. Implements the AbstractProduct interface.
 //AbstractFactoryExample: Uses only interfaces declared by AbstractFactory and AbstractProduct classes.
 
 namespace DesignPatterns.CreationalPatterns.AbstractFactoryPattern
 {
     internal interface IAbstractFactory
     {
-        IAbstractProduct CreateProductA();
-        IAbstractProduct CreateProductB();
+        IAbstractProductA CreateProductA();
+        IAbstractProductB CreateProductB();
     }
 }
